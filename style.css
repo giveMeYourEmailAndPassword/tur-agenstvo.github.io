@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+video::-webkit-media-controls {
+  display: none;
+}
+
+p,
+a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.vertical-line {
+  width: 2px; /* Ширина палки */
+  height: 40px; /* Высота палки */
+  background-color: rgb(36, 35, 35); /* Цвет палки */
+  border-radius: 100;
+}
+
+.img {
+  height: 500px;
+}
+
+.max-h-90vh {
+  max-height: 90vh;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .grid-cols-custom {
+    grid-template-columns: repeat(2, max-content);
+  }
+}
