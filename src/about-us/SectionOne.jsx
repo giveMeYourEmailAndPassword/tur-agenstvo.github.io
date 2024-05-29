@@ -5,6 +5,9 @@ import kyrgyzstan from '/home/unisex/travel-agency/img/kyrgyzstan-2287572.jpg';
 import vilage from '/home/unisex/travel-agency/img/kyrgyzstan-622995_1920.jpg'
 import vilage2 from '/home/unisex/travel-agency/img/kyrgyzstan-63432424.jpg'
 
+// import Footer from "../sections/Footer";
+// import Header from "../sections/Header";
+
 export default function SectionOne() {
     return (
         <>
@@ -23,7 +26,7 @@ export default function SectionOne() {
                     <div className="flex flex-col items-center pt-12 pb-12 gap-7">
                         <div className="flex flex-col items-center">
                             <p className="text-xl text-center">
-                                KETTIK - это компания по организации приключенческих путешествий. Мы специализируемся на стильных <br />
+                                KETTIK - это компания по организа ции приключенческих путешествий. Мы специализируемся на стильных <br />
                                 и оригинальных турах для небольших групп и индивидуальном отдыхе по Кыргызстану.
                                 <br />
 
@@ -86,4 +89,3 @@ export default function SectionOne() {
         </>
     );
 }
-

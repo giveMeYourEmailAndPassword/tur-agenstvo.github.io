@@ -25,21 +25,22 @@ export default function SectionOne() {
                             </h1>
                             <div className="mx-12 mt-4">
                                 <p className="text-white text-2xl">Место назначение</p>
-                                <AutoComplete
-
-                                    pt={{ root: { className: "input rounded-sm px-28 py-3" } }}
-                                    value={selectedItem}
-                                    suggestions={suggestions}
-                                    completeMethod={searchItems}
-                                    field="name"
-                                    onChange={(e) => setSelectedItem(e.value)}
-                                    dropdown
-                                />
+                                <details className="dropdown">
+                                    <summary className="m-1 btn">нажмите для выбора</summary>
+                                    <ul className="p-4 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
+                                        <li><a>Иссык-Куль</a></li>
+                                        <li><a>Каньон Сказка</a></li>
+                                        <li><a>Ала-Арча</a></li>
+                                        <li><a>Алтын-Арашан</a></li>
+                                        <li><a>Кол-Тор</a></li>
+                                        <li><a>Чун-Курчак</a></li>
+                                    </ul>
+                                </details>
                             </div>
-                            <div className="mx-12">
+                            {/* <div className="mx-12">
                                 <p className="text-white text-2xl">Желаемая дата</p>
                                 <input type="text" className="input rounded-sm px-28 py-3" />
-                            </div>
+                            </div> */}
                             <button
                                 className="border-2 border-orange-600 text-white p-8 pt-3 pb-3 text-2xl rounded-full transition-colors duration-300 hover:bg-orange-600 w-96"
                             >
