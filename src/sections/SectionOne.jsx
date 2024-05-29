@@ -1,10 +1,21 @@
+import { AutoComplete } from 'primereact/autocomplete';
+import { useState } from 'react';
+import { placeOne } from './data';
+
 export default function SectionOne() {
+    const [selectedItem, setSelectedItem] = useState("")
+    const [suggestions, setSuggestions] = useState([])
+
+    function searchItems(e) {
+        setSelectedItem(placeOne.map(item => item.title).filter(text => text.includes(e.query)))
+    }
+
     return (
         <>
             <section className="min-h-[100vh]">
-                <div className="flex">
+                <div className="flex" id="main">
                     <div
-                        className="h-[450px] w-[500px] bg-zinc-800 absolute bg-opacity-50 z-10 mt-40 mx-12"
+                        className="h-[450px] w-[500px] bg-zinc-800 absolute bg-opacity-50 z-10 mt-44 mx-12"
                     >
                         <div className="flex flex-col gap-7 items-center">
                             <h1
@@ -14,7 +25,16 @@ export default function SectionOne() {
                             </h1>
                             <div className="mx-12 mt-4">
                                 <p className="text-white text-2xl">Место назначение</p>
-                                <input type="text" className="input rounded-sm px-28 py-3" />
+                                <AutoComplete
+
+                                    pt={{ root: { className: "input rounded-sm px-28 py-3" } }}
+                                    value={selectedItem}
+                                    suggestions={suggestions}
+                                    completeMethod={searchItems}
+                                    field="name"
+                                    onChange={(e) => setSelectedItem(e.value)}
+                                    dropdown
+                                />
                             </div>
                             <div className="mx-12">
                                 <p className="text-white text-2xl">Желаемая дата</p>

@@ -29,4 +29,76 @@ export const guides = [
     descriptionsOne: "Гений, миллиардер, плейбой, филантроп.",
     descriptionsTwo: "Самый интересный Гид",
   },
+  {
+    img: "img/img-guide/IMG_20240414_133138_788-photoaidcom-cropped.jpg.png",
+    title: "Алина Мирная",
+    descriptionsOne: "Я ЗАБЫЛ",
+    descriptionsTwo: "",
+  },
+  {
+    img: "img/img-guide/e05d16afac581e57edacfaba4ee54f78-photoaidcom-cropped.jpeg.png",
+    title: "Рома Николов",
+    descriptionsOne: "Добропорядочен, внимателен и заботлив.",
+    descriptionsTwo: "За ним, как за каменной стеной!",
+  },
+  {
+    img: "img/img-guide/bars.jpg",
+    title: "Камчыбеков Барсбек",
+    descriptionsOne: "Резать, жарить, палки кидать.",
+    descriptionsTwo: "За плохое ругаю, за хорошее хвалю!",
+  },
+];
+
+export const placeOne = [
+  {
+    imgClassName:
+      "group relative m-0 flex h-96 w-[650px] rounded-xl shadow-xl ring-gray-900/5",
+    img: "img/img-cards/1647461945_16-vsegda-pomnim-com-p-ozero-issik-kul-foto-18.jpg",
+    title: "Иссык-Куль",
+    description: "Узнать больше",
+  },
+  {
+    imgClassName:
+      "group relative m-0 flex h-[550px] w-[650px] rounded-xl shadow-xl ring-gray-900/5",
+    img: "img/img-cards/Achik_Tash.jpg",
+    title: "Ачык-Таш",
+    description: "Узнать больше",
+  },
+  {
+    imgClassName:
+      "group relative m-0 flex h-96 w-[650px] rounded-xl shadow-xl ring-gray-900/5",
+    img: "img/img-cards/herd-of-cattle-grazing-in-the-green-fields.jpg",
+    title: "Ала-Арча",
+    description: "Узнать больше",
+  },
+];
+
+export const placeTwo = [
+  {
+    imgClassName:
+      "group relative m-0 flex h-[550px] w-[650px] rounded-xl shadow-xl ring-gray-900/5",
+    img: "img/img-cards/konorchek.jpg",
+    title: "Боомское Ущелье",
+    description: "Узнать больше",
+  },
+  {
+    imgClassName:
+      "group relative m-0 flex h-96 w-[650px] rounded-xl shadow-xl ring-gray-900/5",
+    img: "img/img-cards/chun-kurchak.jpg",
+    title: "Чун-Курчак",
+    description: "Узнать больше",
+  },
+  {
+    imgClassName:
+      "group relative m-0 flex h-96 w-[650px] rounded-xl shadow-xl ring-gray-900/5",
+    img: "img/img-cards/kol-tor.jpg",
+    title: "Кол-Тор",
+    description: "Узнать больше",
+  },
+];
+
+export const navItems = [
+  { label: "Туры", href: "#tours" },
+  { label: "О нас", href: "/about" },
+  { label: "Контакты", href: "#" },
 ];

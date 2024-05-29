@@ -3,7 +3,7 @@ export default function SectionFour() {
         <>
             <section className="mt-20">
                 <div className="flex justify-center">
-                    <h2 className="text-4xl flex">
+                    <h2 className="text-4xl flex" id="oNas">
                         Почему стоит путешествовать именно с нами
                         <p>?</p>
                     </h2>

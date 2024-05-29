@@ -28,7 +28,6 @@ export default function Guide(props) {
                             slidesPerView="3"
                             wrapperClass='px-12 w-[90%]'
                             style={{ width: "100%" }}
-                        // className='px-='
                         >
 
                             {guides.map((guide, index) => (
