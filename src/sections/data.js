@@ -107,5 +107,5 @@ export const navItems = [
   { label: "Туры", href: "/#tours" },
   { label: "О нас", href: "/about" },
   // { label: "О нас", href: "/Booma-Gorge" },
-  { label: "Контакты", href: "#" },
+  { label: "Связь с нами", href: "/contanctUs" },
 ];

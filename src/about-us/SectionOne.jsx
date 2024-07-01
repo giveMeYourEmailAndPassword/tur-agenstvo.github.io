@@ -1,9 +1,16 @@
 import React from 'react';
 import Header from "../sections/Header";
 import Footer from '../sections/Footer';
-import kyrgyzstan from '/home/unisex/travel-agency/img/kyrgyzstan-2287572.jpg';
-import vilage from '/home/unisex/travel-agency/img/kyrgyzstan-622995_1920.jpg'
-import vilage2 from '/home/unisex/travel-agency/img/kyrgyzstan-63432424.jpg'
+import kyrgyzstan from '/img/kyrgyzstan-2287572.jpg';
+import vilage from '/img/kyrgyzstan-622995_1920.jpg'
+import vilage2 from '/img/kyrgyzstan-63432424.jpg'
+import { ClerkProvider } from '@clerk/clerk-react'
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+if (!PUBLISHABLE_KEY) {
+    throw new Error("Missing Publishable Key")
+}
 
 // import Footer from "../sections/Footer";
 // import Header from "../sections/Header";
@@ -11,7 +18,9 @@ import vilage2 from '/home/unisex/travel-agency/img/kyrgyzstan-63432424.jpg'
 export default function SectionOne() {
     return (
         <>
-            <Header />
+            <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+                <Header />
+            </ClerkProvider>
             <section>
                 <div className="absolute z-10 mt-[34rem] flex items-center justify-center w-full">
                     <h1 className="text-white text-7xl mt-7">О компании KETTIK</h1>

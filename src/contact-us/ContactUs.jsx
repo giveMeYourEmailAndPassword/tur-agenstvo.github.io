@@ -1,10 +1,7 @@
 import SectionOne from "./SectionOne"
 import { ScrollRestoration } from "react-router-dom"
 
-
-
-
-function AboutUs() {
+function ContactUs() {
     return (
         <>
             <ScrollRestoration />
@@ -13,4 +10,4 @@ function AboutUs() {
     )
 }
 
-export default AboutUs
+export default ContactUs

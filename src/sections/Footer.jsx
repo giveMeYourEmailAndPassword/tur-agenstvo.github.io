@@ -7,7 +7,7 @@ export default function Footer() {
 
                 <div className="flex gap-12 justify-around pt-12 pb-12">
                     <div>
-                        <img src="././img/logo-2.0.png" className="h-14" alt="kettik.kg" />
+                        <img src="/img/logo-2.0.png" className="h-14" alt="kettik.kg" />
                         <div className="flex flex-col text-[#f4ebdc] text-sm">
                             <p>Добро пожаловать в KETTIK.KG! <br />
                                 Ваш надежный партнера в мире приключений и путешествий! <br />
@@ -46,9 +46,9 @@ export default function Footer() {
                             НАШИ СОЦ СЕТИ
                         </h1>
                         <div className="flex flex-col gap-4 pt-4 items-center color-[#e5b567]">
-                            <img className="h-10 w-10" src="img/img-social/facebook.png" alt="facebook" />
-                            <img className="h-10 w-10" src="img/img-social/instagram.png" alt="instagram" />
-                            <img className="h-10 w-10" src="img/img-social/whatsapp.png" alt="whatsapp" />
+                            <img className="h-10 w-10" src="/img/img-social/facebook.png" alt="facebook" />
+                            <img className="h-10 w-10" src="/img/img-social/instagram.png" alt="instagram" />
+                            <img className="h-10 w-10" src="/img/img-social/whatsapp.png" alt="whatsapp" />
                         </div>
                     </div>
                 </div>

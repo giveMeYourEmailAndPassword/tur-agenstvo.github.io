@@ -1,14 +1,36 @@
-import { AutoComplete } from 'primereact/autocomplete';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { placeOne } from './data';
 
 export default function SectionOne() {
-    const [selectedItem, setSelectedItem] = useState("")
-    const [suggestions, setSuggestions] = useState([])
+    const [selectedValue, setSelectedValue] = useState('');
+    const [selectedDate, setSelectedDate] = useState('')
 
-    function searchItems(e) {
-        setSelectedItem(placeOne.map(item => item.title).filter(text => text.includes(e.query)))
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        if (!selectedValue || !selectedDate) {
+            alert("Пожалуйста, выберите Место назначения и Желаемую дату!");
+            return;
+        }
+        let result = `${selectedValue}/${selectedDate}`;
+        navigate(result);
+        console.log(result);
+
+    };
+
+    const handleChange = (event) => {
+        setSelectedValue(event.target.value);
     }
+
+    const dateChange = (event) => {
+        setSelectedDate(event.target.value);
+    }
+
+
+
+
 
     return (
         <>
@@ -17,32 +39,56 @@ export default function SectionOne() {
                     <div
                         className="h-[450px] w-[500px] bg-zinc-800 absolute bg-opacity-50 z-10 mt-44 mx-12"
                     >
-                        <div className="flex flex-col gap-7 items-center">
+                        <div className="flex flex-col gap-7 justify-center">
                             <h1
                                 className="text-white text-4xl mt-7 flex justify-center items-center"
                             >
                                 Найди свой тур
                             </h1>
-                            <div className="mx-12 mt-4">
-                                <p className="text-white text-2xl">Место назначение</p>
-                                <details className="dropdown">
-                                    <summary className="m-1 btn">нажмите для выбора</summary>
-                                    <ul className="p-4 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-                                        <li><a>Иссык-Куль</a></li>
-                                        <li><a>Каньон Сказка</a></li>
-                                        <li><a>Ала-Арча</a></li>
-                                        <li><a>Алтын-Арашан</a></li>
-                                        <li><a>Кол-Тор</a></li>
-                                        <li><a>Чун-Курчак</a></li>
-                                    </ul>
-                                </details>
+                            <div className='flex flex-col gap-8'>
+                                <div className="mx-12 mt-4">
+                                    <p className="text-white text-2xl">Место назначение</p>
+                                    <select
+                                        className="select w-full max-w-xl text-left text-lg"
+                                        value={selectedValue}
+                                        onChange={handleChange}
+                                    >
+                                        <option disabled value="">Нажмите для выбора</option>
+                                        <option value="Issyk-Kul">Иссык-Куль</option>
+                                        <option value="Ala-Archa">Ала-Арча</option>
+                                        <option value="Skazka">Ущелье Сказка</option>
+                                        <option value="Kol-Tor">Кол-Тор</option>
+                                        <option value="Chun-Kurchak">Чункурчак</option>
+                                        <option value="Arashan">Алтын-Арашан</option>
+                                    </select>
+                                </div>
+                                <div className="mx-12">
+                                    <p className="text-white text-2xl">Желаемый месяц</p>
+                                    <select className="select w-full max-w-xl text-left text-lg"
+                                        value={selectedDate}
+                                        onChange={dateChange}>
+                                        <option disabled value="" selected className=''>Нажмите для выбора</option>
+                                        <option value="January">Январь</option>
+                                        <option value="February">Февраль</option>
+                                        <option value="March">Март</option>
+                                        <option value="April">Апрель</option>
+                                        <option value="May">Май</option>
+                                        <option value="June">Июнь</option>
+                                        <option value="July">Июль</option>
+                                        <option value="August">Август</option>
+                                        <option value="September">Сентябрь</option>
+                                        <option value="October">Октябрь</option>
+                                        <option value="November">Ноябрь</option>
+                                        <option value="December">Декабрь</option>
+                                    </select>
+                                </div>
                             </div>
-                            {/* <div className="mx-12">
-                                <p className="text-white text-2xl">Желаемая дата</p>
-                                <input type="text" className="input rounded-sm px-28 py-3" />
-                            </div> */}
                             <button
-                                className="border-2 border-orange-600 text-white p-8 pt-3 pb-3 text-2xl rounded-full transition-colors duration-300 hover:bg-orange-600 w-96"
+                                className="flex justify-center self-center mt-7  
+                                 border-2 border-orange-600 text-white p-8 pt-3 pb-3 text-2xl rounded-full transition-colors duration-300 hover:bg-orange-600 w-96"
+                                onClick={() => handleClick()}
+                                href="asdasd"
+
                             >
                                 Найти
                             </button>
@@ -62,7 +108,7 @@ export default function SectionOne() {
 
                 <div className="max-h-screen overflow-hidden">
                     <video
-                        src="video/KG.mp4"
+                        src="/video/KG.mp4"
                         autoPlay
                         muted
                         loop

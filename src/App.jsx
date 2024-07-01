@@ -6,20 +6,33 @@ import SectionFour from './sections/SectionFour'
 import SectionFive from './sections/SectionFive'
 import Footer from './sections/Footer'
 import ScrollToHashElement from './ScrollToHashElement'
-// import { Outlet } from 'react-router-dom'
+import { ScrollRestoration } from 'react-router-dom'
+import { ClerkProvider } from '@clerk/clerk-react'
+
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+
+if (!PUBLISHABLE_KEY) {
+  throw new Error("Missing Publishable Key")
+}
 
 
 function App() {
   return (
     <>
       <ScrollToHashElement />
-      <Header />
+
+      <ClerkProvider publishableKey={PUBLISHABLE_KEY}>
+        <Header />
+      </ClerkProvider>
+
       <SectionOne />
       <SectionTwo />
       <SectionThree />
       <SectionFour />
       <SectionFive />
       <Footer />
+      <ScrollRestoration />
+
     </>
   )
 }

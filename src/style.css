@@ -2,9 +2,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-* {
   scroll-behavior: smooth;
 }
 
@@ -28,8 +25,8 @@ h3 {
 }
 
 .vertical-line {
-  width: 2px; /* Ширина палки */
-  height: 40px; /* Высота палки */
+  width: 2.2px; /* Ширина палки */
+  height: 45px; /* Высота палки */
   background-color: rgb(36, 35, 35); /* Цвет палки */
   border-radius: 100;
 }
@@ -51,5 +48,3 @@ h3 {
     grid-template-columns: repeat(2, max-content);
   }
 }
-
-@import "daisyui";

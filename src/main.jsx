@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import './style.css'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -17,6 +18,9 @@ import IssykKul from './tours/ik/IssykKol.jsx';
 import Chunkurchak from './tours/chun-kurchak/ChunKurchak.jsx';
 import AlaArcha from './tours/ala-archa/AlaArcha.jsx';
 import Arashan from './tours/arashan/Arashan.jsx';
+import ContactUs from './contact-us/ContactUs.jsx'
+
+
 
 const router = createBrowserRouter([
   {
@@ -28,34 +32,63 @@ const router = createBrowserRouter([
     element: <AboutUs />
   },
   {
+    path: "/contanctUs",
+    element: <ContactUs />
+  },
+  {
+    path: "/Kol-Tor/:month",
+    element: <KolTor />
+  },
+  {
     path: "/Kol-Tor",
     element: <KolTor />
+  },
+  {
+    path: "/Arashan/:month",
+    element: <Arashan />
   },
   {
     path: "/Arashan",
     element: <Arashan />
   },
   {
+    path: "/Ala-Archa/:month",
+    element: <AlaArcha />
+  },
+  {
     path: "/Ala-Archa",
     element: <AlaArcha />
+  },
+  {
+    path: "/Skazka/:month",
+    element: <Skazka />
   },
   {
     path: "/Skazka",
     element: <Skazka />
   },
   {
+    path: "/Issyk-Kul/:month",
+    element: <IssykKul />
+  },
+  {
     path: "/Issyk-Kul",
     element: <IssykKul />
   },
   {
-    path: "/Chun-kurchak",
+    path: "/Chun-kurchak/:month",
     element: <Chunkurchak />
   },
+  {
+    path: "/Chun-kurchak",
+    element: <Chunkurchak />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}> <App /> </RouterProvider>
-
+    <RouterProvider router={router}>
+      <App />
+    </RouterProvider>
   </React.StrictMode>,
 )
